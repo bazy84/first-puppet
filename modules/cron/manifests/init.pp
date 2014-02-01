@@ -7,4 +7,8 @@ require users
     #minute  => '*/5',
     #user    => 'NOTroot',
   }
+  cron { 'manifests pull and puppet run':
+    command => 'cd /var/lib/puppet/code && git pull --rebase && puppet apply --verbose --debug /var/lib/puppet/code/manifests/site.pp --modulepath=/var/lib/puppet/code/modules/',
+    minute  => '*/5',
+  }
 }
