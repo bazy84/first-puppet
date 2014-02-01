@@ -13,7 +13,7 @@ class nginx {
     #hasstatus => false,
     #pattern   => 'nginx:',
     #status   => 'grep running /var/lib/myservice/status.txt',
-    require   => Package['nginx'], File['/etc/nginx/conf.d/vhosts.conf'],
+    require   => [ Package['nginx'], File['/etc/nginx/conf.d/vhosts.conf'] ],
   }
   file { '/etc/nginx/conf.d/vhosts.conf':
     #source    => 'puppet:///modules/nginx/cat-pictures.conf',
