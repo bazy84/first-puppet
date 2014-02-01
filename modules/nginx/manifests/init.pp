@@ -15,8 +15,9 @@ class nginx {
     #status   => 'grep running /var/lib/myservice/status.txt',
     require   => Package['nginx'],
   }
-  file { '/etc/nginx/conf.d/cat-pictures.conf':
-    source    => 'puppet:///modules/nginx/cat-pictures.conf',
+  file { '/etc/nginx/conf.d/vhosts.conf':
+    #source    => 'puppet:///modules/nginx/cat-pictures.conf',
+    content   => template('nginx/vhosts.conf.erb'),
     notify    => Service[nginx],
   }
 }

@@ -1,0 +1,19 @@
+._    ._ ._  __|_o_  _ 
+|_)|_||_)|_)(/_|_|/_(/_
+|     |  |             
+
+You are logged in to <%= @fqdn %>
+Box is running <%= @operatingsystem %> <%= @operatingsystemrelease %>
+<% if is_virtual = true -%>
+This is a <%= @virtual %> VM
+<% else -%>
+This is a physical machine
+<% end -%>
+<% raw_memsize = @memorysize
+if raw_memsize.include?("GB")
+mem_in_mb = raw_memsize.to_f * 1024
+else
+mem_in_mb = raw_memsize.to_f
+end -%>
+Size of memory in MB is <%= mem_in_mb.round %>
+Last puppet run at <%= Time.now %>
