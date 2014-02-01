@@ -9,4 +9,5 @@ node default {
   include cron
 
   include motd
+  include selinux
 }
