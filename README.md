@@ -1,4 +1,4 @@
 first-puppet
 ============
 
-learning puppet
+learning puppet, playing around
