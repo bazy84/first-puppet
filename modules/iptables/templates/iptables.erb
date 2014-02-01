@@ -1,0 +1,8 @@
+### File managed with puppet ###
+#### Module:           '<%= scope.to_hash['module_name'] %>'
+#### Template source:  'MODULES<%= template_source.gsub(Regexp.new("^#{Puppet::Node::Environment.current[:modulepath].gsub(':','|')}"),"") %>'
+*filter
+:INPUT ACCEPT [44:3248]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [23:2892]
+COMMIT

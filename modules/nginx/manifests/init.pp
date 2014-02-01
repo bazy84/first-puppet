@@ -18,7 +18,7 @@ class nginx {
   file { '/etc/nginx/conf.d/vhosts.conf':
     #source    => 'puppet:///modules/nginx/cat-pictures.conf',
     content   => template('nginx/vhosts.conf.erb'),
-    notify    => Service[nginx],
+    notify    => Service['nginx'],
     require   => Package['nginx'],
   }
 }

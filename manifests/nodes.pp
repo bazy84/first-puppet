@@ -10,4 +10,5 @@ node default {
 
   include motd
   include selinux
+  include iptables
 }
