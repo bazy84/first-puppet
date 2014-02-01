@@ -1,6 +1,12 @@
 class my-packages {
-  $packages = [ 'tree', 'rsync', 'mtr', 'mc', 'wget', 'lsof', 'vim-enhanced' ]
-  package { $packages:
+  package { [ 'tree',
+              'rsync',
+              'mtr',
+              'mc',
+              'wget',
+              'lsof',
+              'php-cli',
+              'vim-enhanced' ]:
     ensure => installed,
   }
 }
