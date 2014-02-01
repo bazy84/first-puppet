@@ -1,5 +1,6 @@
 class my-packages {
-  package { 'tree':
+  $packages = [ 'tree', 'rsync', 'mtr', 'mc', 'wget' ]
+  package { $packages:
     ensure => installed,
   }
 }

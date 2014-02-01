@@ -3,4 +3,5 @@ node 'ip-172-31-8-246' {
   include my-packages
   include users
   include sshd
+  include cron
 }
