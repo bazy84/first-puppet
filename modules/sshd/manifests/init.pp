@@ -7,5 +7,6 @@ class sshd {
     notify => Service['sshd'],
     owner  => 'root',
     group  => 'root',
+    mode   => '600',
   }
 }
