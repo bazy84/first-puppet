@@ -1,4 +1,4 @@
-node default {
+node /^ip+/ {
   $site_name = 'cat-pictures'
   $site_domain = 'cat-pictures.com'
   include nginx
