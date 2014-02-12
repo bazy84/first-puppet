@@ -1,6 +1,4 @@
 node /^ip+/ {
-  notify { "I think my hostname is ${::hostname}": }
-
   $site_name = 'cat-pictures'
   $site_domain = 'cat-pictures.com'
   include nginx
