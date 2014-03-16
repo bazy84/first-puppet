@@ -1,4 +1,6 @@
 class cron {
+require my-packages
+
 require users
   cron { 'Back up cat-pictures':
     command => '/usr/bin/rsync -az /var/www/cat-pictures/ /tmp/cat-pictures-backup/',

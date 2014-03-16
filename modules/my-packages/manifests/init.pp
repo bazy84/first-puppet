@@ -1,5 +1,6 @@
 class my-packages {
   package { [ 'tree',
+              'cronie',
               'rsync',
               'mtr',
               'mc',
